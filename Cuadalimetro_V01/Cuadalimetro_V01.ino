@@ -166,7 +166,7 @@ void disp_something() // Muestra la palabra "COOL"
       lc.clearDisplay(0);
 }
 
-void moving_digits() // HAce un conteo hasta el número 6
+void moving_digits() // Hace un conteo hasta el número 6
 {
   for(int i=0;i<8;i++)
   {
@@ -193,7 +193,7 @@ void printNumber(int v) {
         v=v*-1;
     }
     ones=v%10; // En esta parte se divide el valor, XXX, quedaría de ver el punto decimal
-    v=v/10;
+    v=v/10;	// Porque divide todo por 10? no deber{ias ser 100 también?
     tens=v%10;
     v=v/10;
     hundreds=v;	
@@ -207,7 +207,7 @@ void printNumber(int v) {
        lc.setChar(0,3,' ',false);
     }
     //Now print the number digit by digit
-    lc.setDigit(0,2,(byte)hundreds,false);
-    lc.setDigit(0,1,(byte)tens,false);
-    lc.setDigit(0,0,(byte)ones,false);
+    lc.setDigit(0,2,(byte)hundreds,false); // centésima, se debería quitar el byte?, LedControl(dataPin,clockPin,csPin,numDevices)
+    lc.setDigit(0,1,(byte)tens,false);	   // décima	
+    lc.setDigit(0,0,(byte)ones,false);	   // unidad	
 }
