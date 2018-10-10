@@ -92,11 +92,11 @@ void loop ()
 void lcd_display (){
    
     lcd.setCursor(0, 0);
-    lcd.print(caudal_L_m, 3); // le dejamos una sola décima
+    lcd.print(caudal_L_m, 3); // lo dejamos en milesima
     lcd.print("L/min ");
     
     lcd.setCursor(0, 1);
-    lcd.print(volumen, 3); // le dejamos una sola décima
+    lcd.print(volumen, 3); // lo dejamos en milesima
     lcd.print("L ");
 }
 
