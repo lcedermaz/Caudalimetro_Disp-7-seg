@@ -49,7 +49,36 @@ void setup()
   lcd.begin(16, 2);
   lcd.backlight();// Indicamos medidas de LCD
   Wire.begin(); //configura el bus I2C estableciendo arduino como MASTER
+  /*
+  //----Mensaje de Bienvenida----//
+  lcd.setCursor(4, 0);
+  lcd.print("LAMyEN");
 
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando.");
+  delay(1000);
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando..");
+  delay(1000);
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando...");
+  delay(1000);
+  lcd.clear();
+
+  lcd.setCursor(4, 0);
+  lcd.print("LAMyEN");
+
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando.");
+  delay(1000);
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando..");
+  delay(1000);
+  lcd.setCursor(2, 1);
+  lcd.print(" Cargando...");
+  delay(100);
+  lcd.clear();
+*/
   //----Config Serial
   Serial.begin(9600);
   
